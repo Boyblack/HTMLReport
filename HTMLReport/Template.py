@@ -182,7 +182,8 @@ function load() {
   pre {
     word-wrap: break-word;
     word-break: break-all;
-    overflow: auto
+    overflow: auto;
+    white-space: pre-wrap
   }
 
   h1 {
@@ -525,10 +526,10 @@ function load() {
 
     REPORT_TEST_WITH_OUTPUT_TMPL = r"""
 <tr id='{tid}' class='{Class}'>
-  <td class='{style}'>
+  <td class='{style}'  colspan='7'>
     <div class='testcase'>{desc}</div>
   </td>
-  <td class='{style}' colspan='7' align='center'>
+  <td class='{style}' align='center'>
     <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_{tid}')">{status}</a>
   </td>
 </tr>
@@ -547,10 +548,10 @@ function load() {
 
     REPORT_TEST_NO_OUTPUT_TMPL = r"""
 <tr id='{tid}' class='{Class}'>
-  <td class='{style}'>
+  <td class='{style}'  colspan='7'>
     <div class='testcase'>{desc}</div>
   </td>
-  <td class='{style}' colspan='7' align='center'>{status}</td>
+  <td class='{style}' align='center'>{status}</td>
 </tr>
 """
 
